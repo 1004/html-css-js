@@ -1,0 +1,84 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.quan-container {
+    width: 292px;
+    height: 342px;
+    margin: 0 auto;
+    background-color: white;
+    background-image: url("../../img/bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: 1px #f4f4f4 solid;
+}
+
+.quan-bg{
+    float: left;
+    width: 292px;
+    height: 342px;
+}
+
+.quan-top {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    presentation-level: increment;
+}
+
+.quan-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222222;
+    margin-left: 20px;
+    float: left;
+}
+
+.quan-top img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 17px;
+    float: left;
+}
+
+.quan-item{
+    height: 84px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.quan-item-img{
+    padding-top: 6px;
+    float: left;
+}
+
+.quan-item-img img{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.quan-item-content{
+    padding-left: 8px;
+    padding-top: 10px;
+    float: left;
+}
+
+.quan-item-content .money {
+    font-size: 32px;
+    color: red;
+    font-weight: bold;
+}
+
+.quan-item-content .subtitle {
+    font-size: 12px;
+    color: #b4b4b4;
+}
+
+.quan-item-content .tips {
+    font-size: 12px;
+    color: #454545;
+}

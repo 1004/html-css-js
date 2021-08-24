@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>第一个试试</title>
+    <link rel="stylesheet"
+          href="../../../../mock/前端vue/尚硅谷/01第一阶段/html5+css3刘志远/20200902html+css/课堂案例/sphWeb/css/index.css">
 </head>
 <body>
     <h1> 看看吧</h1>
@@ -14,5 +16,134 @@
     <h5>图片组件</h5>
     <img src="../img/mm.jpg" width="100px" height="200px" border="5" title="小图片" alt="加载中">
     <br>
+    <h1>
+        <span> 字体已经过期了</span>
+    </h1>
+    <br>
+    <p> 莱克斯顿解放路可视对讲分类可视对讲弗兰克斯地方加是录带看</p>
+    <br>
+    <h4>超链接</h4>
+    <a href="http://www.baidu.com" target="_blank">百度一下</a>
+    <font color="yellow" id="one"> 第一层</font>
+    <div style="height: 1000px"></div>
+    <a href="#one"> 走起</a>
+    <hr>
+    <h3>列表</h3>
+    <h5>无序列表</h5>
+    <ul>
+        <li>
+            电脑1
+        </li>
+        <li>
+            电脑2
+        </li>
+        <li>
+            电脑3
+        </li>
+        <li>
+            <a href="##">购物车</a>
+        </li>
+    </ul>
+    <h5>有序列表</h5>
+    <hr>
+    <ol>
+        <li>
+            手机1
+        </li>
+        <li>
+            手机2
+        </li>
+        <li>
+            手机3
+        </li>
+        <li>
+            手机4
+        </li>
+    </ol>
+    <hr>
+    <h5> 自定义列表</h5>
+    <dl>
+        <dt>
+             <h2>亚洲</h2>
+        </dt>
+        <dd>
+            <a href="##">中国</a>
+        </dd>
+        <dd>
+            韩国
+        </dd>
+    </dl>
+    <hr>
+    <h1> 表格</h1>
+    <table width="600" border="1" height="300" align="center" cellpadding="0">
+        <caption>
+            <h1>课程表</h1>
+        </caption>
+        <tr>
+            <td>
+                日期
+            </td>
+            <td colspan="5" align="center">
+                课程
+            </td>
+            <td colspan="2">
+                周末
+            </td>
+        </tr>
+        <tr align="center" bgcolor="#adff2f">
+            <td> 星期</td>
+            <td> 星期1</td>
+            <td> 星期2</td>
+            <td> 星期3</td>
+            <td> 星期4</td>
+            <td> 星期5</td>
+            <td> 星期6</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>表单 </h1>
+    <form action="#" method="get">
+        <label for="txt1">姓名：</label>
+        <input type="text" id="txt1">
+        <br>
+        <label for="txt2">密码：</label>
+        <input type="password" id="txt2">
+        <br>
+        性别:
+        <input type="radio" name="gender" id="male" checked><label for="male">男</label>
+        <input type="radio" name="gender" id="female"><label for="female">女</label>
+        <br>
+        国籍：
+        <select>
+            <option>
+                中国
+            </option>
+            <option>日本</option>
+            <option selected>韩国</option>
+        </select>
+        <select>
+            <optgroup label="亚洲">
+                <option>中国</option>
+                <option>日本</option>
+            </optgroup>
+            <optgroup label="欧洲">
+                <option>法国</option>
+                <option>德国</option>
+            </optgroup>
+        </select>
+        <br>
+        爱好：
+        <input type="checkbox"> 抽烟
+        <input type="checkbox"> 喝酒
+        <br>
+        个人简介
+        <textarea>
+
+        </textarea>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+
 </body>
 </html>
