@@ -123,7 +123,7 @@ body{
 
 .recommend {
     margin-top: 10px;
-    width: 1240px;
+    width: 1220px;
     height: 292px;
     border: #e1e1e1 1px solid;
     background-color: white;
@@ -131,19 +131,106 @@ body{
 
 .recommend li{
     float: left;
-    width: 293px;
+    width: 300px;
     height: 100%;
-    background-color: #f97e27;
 }
 
 .recommend li:nth-of-type(2){
-    margin-left: 10px;
+    /*padding-left: 10px;*/
 }
 
 .recommend li:nth-of-type(3){
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .recommend li:nth-of-type(4){
+    /*margin-left: 10px;*/
+}
+
+.recommend .item {
+    position: relative;
+}
+
+.recommend .item .title{
+    height: 40px;
+    width: 100%;
+    background-color: #f9f9f9;
+    line-height: 40px;
+    border-left: #e1e1e1 1px solid;
+    border-bottom: #e1e1e1 1px solid;
+}
+
+.recommend .item>i{
+    position: absolute;
+    /*border: #222222 1px solid;*/
+    height: 100%;
+    z-index: 1;
+    width: 1px;
+    background-image: linear-gradient(to bottom,white 0%,#e1e1e1 50%,white 100%);
+}
+
+.recommend .item .title span {
     margin-left: 10px;
+}
+
+.recommend .item .list li{
+    margin-left: 0px;
+}
+
+.recommend .item .list li a{
+    height: 23px;
+    display: block;
+    line-height: 23px;
+    font-size: 12px;
+    position: relative;
+    border-bottom: #e1e1e1 1px dashed;
+}
+
+.recommend .item .list li a p{
+    color: #222222;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.recommend .item .list li a span{
+    color: #84b1fb;
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+}
+
+/*在线客服*/
+.online-server {
+    position: fixed;
+    right: 0;
+    top: 300px;
+    background-color: #4b4b4b;
+}
+
+.online-server a{
+    display: block;
+    font-size: 22px;
+    color: white;
+    padding: 20px 15px;
+}
+
+.online-show {
+    width: 200px;
+    height: 400px;
+    position: fixed;
+    right: 0;
+    top: 300px;
+    background-color: #4b4b4b;
+    display: none;
+}
+
+.online-server>a:hover .online-show {
+    display: block;
+}
+
+.online-server p{
+    width: 20px;
 }
