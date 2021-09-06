@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <div id="app">
+        <p>{{msg}}</p>
+<!--        指令后面，就是js了-->
+        <a v-bind:href="url">点击了</a>
+        <button v-on:click="test">再点</button>
+        <button @click="test1">同一个点击</button>
+    </div>
+
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm  = new Vue({
+        el:"#app",
+        data:{
+            //提供数据源的
+            msg:"信息展示",
+            url:"http://www.baidu.com"
+        },
+        methods:{
+            //用来写函数的
+            test(string) {
+                alert("kkk")
+            },
+
+            test1:function () {
+                console.log("-----")
+            }
+        }
+    })
+</script>
 </html>

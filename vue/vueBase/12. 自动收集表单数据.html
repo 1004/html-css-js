@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <div id="app">
+        <label for="name">姓名</label><input type="text" id="name" v-model="userInfo.username"><br>
+        <label for="pwd">密码</label> <input type="password" id="pwd" v-model="userInfo.password"><br>
+        <label>性别</label>
+<!--        vm 默认收藏value值-->
+        <label>
+            男：
+            <input type="radio" name="sex" value="man" v-model="userInfo.sex">
+        </label>
+        <label>
+            女：
+            <input type="radio" value="woman" name="sex" v-model="userInfo.sex">
+        </label>
+        <br>
+        <label>爱好</label>
+        <label>
+            足球<input type="checkbox" value="footerble" v-model="userInfo.favourite">
+        </label>
+        <label>
+            篮球<input type="checkbox" value="basketball" v-model="userInfo.favourite">
+        </label>
+        <label>
+            乒乓球<input type="checkbox" value="pingband" v-model="userInfo.favourite">
+        </label>
+        <br>
+        <label>
+            城市：
+        </label>
+        <select v-model="userInfo.cityId">
+            <option :value="item.id" v-for="(item,index) in cites" :key="item.id">{{item.name}}</option>
+        </select>
+        <br>
+
+        <label>简介</label> <br>
+
+        <textarea cols="30" rows="10"  v-model="userInfo.intro"></textarea>
+        <br>
+        <button @click="submit">提交</button>
+
+    </div>
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            cites:[
+                {id:1,name:'北京'},
+                {id:2,name:'上海'},
+                {id:3,name:'山东'},
+            ],
+            userInfo:{
+                username:'',
+                password:'',
+                sex:'',
+                cityId:'1',
+                intro:'',
+                favourite:[]
+            },
+        },
+        methods:{
+          submit() {
+              if (this.userInfo.username == null || this.userInfo.username.length == 0){
+                  alert("用户名不能为空");
+                  return;
+              }
+              console.log("提交吧");
+          }
+        }
+    })
+</script>
 </html>

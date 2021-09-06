@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript">
+        window.onload=function () {
+            new Vue({
+                el: '#app',
+                data: {
+                    username: '看逻辑离开家'
+                }
+            })
+        }
+    </script>
 </head>
 <body>
-$END$
+    <div id="app">
+        <input type="text" v-model="username">
+        <p>Hello,{{username}}</p>
+    </div>
 </body>
 </html>

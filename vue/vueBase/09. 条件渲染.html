@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+
+    <!--        条件渲染-->
+
+    <!--    不存在dom 树-->
+    <p v-if="isOK">{{isOK}}-内容1</p>
+    <p v-else>{{isOK}}-内容2</p>
+
+    <!--    在dom 树种， display:noe-->
+    <p v-show="isOK">show</p>
+    <p v-show="!isOK">not show</p>
+
+    <button v-on:click="change">修改</button>
+    <button @click="isOK = !isOK">修改</button>
+
+</div>
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            isOK: true
+        },
+        methods: {
+            change() {
+                this.isOK = !this.isOK
+            }
+        }
+    })
+</script>
 </html>

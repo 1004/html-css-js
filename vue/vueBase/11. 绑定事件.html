@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <button @click="test">测测</button>
+    <button @click="test($event)">测测1</button>
+    <button @click="test($event,'李来了')">测测2</button>
+
+    <!--    阻止事件冒泡-->
+    <button @click.stop="test($event,'李来了')">测测2</button>
+
+</div>
 </body>
+<script src="../js/vue.js">
+
+</script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {
+            test(event, p1) {
+                console.log(event.target.innerHTML);
+                console.log(p1);
+            }
+        }
+    })
+</script>
 </html>

@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        .classA {
+            background-color: hotpink;
+        }
+
+        .classB {
+            color: #3c763d;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div id="app">
+    <p v-bind:class="myClass">是登录接口方式代理费</p>
+    <p :class="myClass">是登录接口方式代理费</p>
+
+    <!--    对象的方式修改-->
+    <p :class="{classA:isA,classB:isB}">sdfsdf</p>
+
+    <!--    数组-->
+    <p :class="['classA','classB']">adsf</p>
+    <button @click="change">修改</button>
+</div>
+
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data() {
+            return {
+                myClass: 'classA',
+                isA: true,
+                isB: false
+            }
+        },
+        methods: {
+            change() {
+                this.myClass = 'classB'
+            }
+        }
+    })
+</script>
 </html>

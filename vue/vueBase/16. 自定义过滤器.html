@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{timeNow | timeFormat}}</p>
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    //通过管道-->定义过滤器[全局]
+    Vue.filter('timeFormat',function (value) {
+        return "时间格式化："+value;
+    });
+
+    const vm = new Vue({
+        el:"#app",
+        data:{
+            timeNow:Date.now()
+        },
+
+    })
+</script>
+</html>

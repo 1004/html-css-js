@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <input type="text" placeholder="请输入关键字" v-model="keyword">
+    <ul>
+        <!--        遍历数组-->
+        <li v-for="(item,index) in sortList" :key="item.id">
+            <p>{{item.name}}</p>
+        </li>
+    </ul>
+</div>
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data() {
+            return {
+                keyword: '',
+                list: [
+                    {
+                        name: "xky1",
+                        age: "12",
+                        id: 1
+                    },
+                    {
+                        name: "wst3",
+                        age: "12",
+                        id: 3
+                    },
+                    {
+                        name: "xky4",
+                        age: "12",
+                        id: 4
+                    },
+                    {
+                        name: "xky2",
+                        age: "12",
+                        id: 2
+                    },
+                ]
+            }
+        },
+        computed: {
+            newlist: {
+                get: function () {
+                    let newarr = [];
+                    this.list.forEach((value, index, array) => {
+                        if (value.name.indexOf(this.keyword) >= 0) {
+                            newarr.push(value)
+                        }
+                    });
+                    return newarr;
+                }
+            },
+            sortList() {
+                return this.list.sort(function (v1, v2) {
+                    if (v1.id < v2.id) {
+                        return -1;
+                    } else if (v1.id > v2.id) {
+                        return 1;
+                    } else {
+                        return 0;
+                    }
+                })
+            }
+        }
+    })
+</script>
 </html>

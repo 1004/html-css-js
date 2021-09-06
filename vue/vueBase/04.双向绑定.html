@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <!--    双向表单必须绑定表单-->
+    <p>{{msg}}</p>
+    <form>
+        <label>姓名</label><input type="text" v-bind:value="msg">
+        <label>双向绑定</label><input type="text" v-model="msg">
+        <label>密码</label><input type="password">
+        <input type="submit" value="提交" v-on:click="submit">
+    </form>
+</div>
 </body>
+<script src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        // data: {},
+        methods: {
+            submit() {
+                alert("ccc")
+            }
+        },
+        data() {
+            return {
+                msg:"hellow"
+            }
+        }
+    })
+</script>
 </html>

@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="app">
+    <!--    无论是标签里的属性，还是内容区的{{}},里面嵌套的都是js代码，可以和vm 进行通信，  vm在挂载app后，就形成了html模板，不是真正的html了-->
+    <input type="text" v-model="v1"> <label>+</label> <input type="text" v-model="v2"> = <label>{{parseInt(v1)+parseInt(v2)}}</label>
+
+    <!--    方法也可以双向绑定， 在v1&ndash;&gt;vm&ndash;&gt;data&ndash;&gt;getTotal&ndash;&gt;v刷新-->
+    <label>{{getTotal()}}</label>
+
+    <!--    计算属性-->
+    <label>{{total}}</label>
+
+    <!--    数据监听修改-->
+    <label>{{total_v2}}</label>
+</div>
 </body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            v1: 0,
+            v2: 0,
+            total_v2: 0,
+        },
+        methods: {
+            getTotal() {
+                return parseInt(this.v1) + parseInt(this.v2)
+            }
+        },
+        //计算属性对象， 里面有total属性，可以拥有get和set方法, 计算属性如果不变，只调用一次 ，同步
+        computed: {
+            total: {
+                get() {
+                    return parseInt(this.v1) + parseInt(this.v2)
+                },
+
+                set(v) {
+
+                }
+            },
+
+            //get 方法的简写
+            total2() {
+
+            }
+
+        },
+        //监听了 可以同步，可以是异步
+        watch: {
+            v1: {
+                handler: function (newV, oldV) {
+                    this.total_v2 = parseInt(newV) + parseInt(this.v2)
+                },
+                immediate:true//立刻生效
+            },
+            v2: {
+                //es6 简写
+                handler(newV, oldV) {
+                    this.total_v2 = parseInt(this.v1) + parseInt(newV)
+                }
+            }
+
+        }
+    });
+
+    //通过对象的形式监听
+    vm.$watch('v1',function (newV, oldV) {
+        console.log(this.v1)
+    })
+
+    // vm.$watch('v2',()=>{
+    //     //箭头形式的，指向window
+    //     console.log(this)
+    // })
+
+</script>
 </html>

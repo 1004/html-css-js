@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script src="myplugin.js"></script>
+<script>
+
+    //将插件注册到Vue上，自动调用插件上的install安装方法
+    Vue.use(myPlugin);
+
+    const vm =new Vue({
+        el:'#app',
+        data:{
+
+        }
+    })
+</script>
+</html>

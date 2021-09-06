@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <p v-text="msg">sldkfjsldkfj</p>
+        <p v-upper="msg">sdsdsdsd</p>
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    Vue.directive('upper',function (node,binding) {
+        console.log(binding);
+    });
+
+    const vm = new Vue({
+        el:"#app",
+        data() {
+            return {
+                msg:'kkkkkkk'
+            };
+        },
+    })
+</script>
+</html>

@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    let obj = {
+        key1: 'zhao',
+        key2: 'han'
+    };
+    obj.key3 = "san";
+
+    /**
+     * 可以为属性设置 get方法和set方法
+     */
+    Object.defineProperty(obj, 'key4', {
+        get() {
+            return this.key1+"-"+this.key2;
+        },
+
+        set(v) {
+            console.log(v)
+        }
+    });
+
+    console.log(obj);
+    obj.key4='kkkk'
+
+
+    //模拟数据代理
+    let vm ={}
+    let data = {msg:"kkk"}
+
+    Object.defineProperty(vm,'msg',{
+        get(){
+          return data.msg;
+        },
+
+        set(value){
+           data.msg = value
+        }
+    })
+
+    vm.msg = "kkkkkkkk"
+    console.log(vm.msg)
+
+
+
+</script>
 </html>
