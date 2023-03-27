@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+
+
+        function Anim(name) {
+            this.name = name;
+        }
+
+        //属性继承
+        function Dog(name) {
+            Anim.call(this,name)
+        }
+
+        //方法继承
+        Anim.prototype.eat = function () {
+          console.log("吃东西")
+        };
+
+        //改变 __proto__ 指向, 原型指向Anim ， 这样可以找到Anim().__proto__,进而可以找到eat
+        Dog.prototype = new Anim();
+
+        //修改构造器指向
+        Dog.prototype.constructor = Dog;
+
+
+        var d = new Dog("keji");
+
+
+        d.eat();
+
+    </script>
 </head>
 <body>
-$END$
+
 </body>
 </html>

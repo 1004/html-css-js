@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        // 基础部分
+        let a = 1;
+        const OK = "OK";
+        console.log(OK);
+        let type = typeof OK;
+        console.log(type);
+        let b = true;
+        console.log(typeof b);
+        let c = null;
+        console.log(typeof c);
+
+        //类型转换
+        let aa = 10;
+        aa = aa.toString();
+        aa = aa+'';
+        aa = parseInt(aa);
+
+        let bb = 123;
+        bb = Boolean(bb);
+        bb = !!bb; //2次转换，会隐士转boolean
+
+        if (aa > 10){
+            console.log("大于10")
+        }
+
+        let o1 = new Object();
+        o1.name = 'xky';
+        o1.age = 10;
+        for (let pro in o1){
+            console.log(pro+"--"+o1[pro])
+        }
+
+        // let a = 10;
+        // function fn(){
+        //     a = 20;
+        //     console.log(a);
+        // }
+        // fn();
+        // console.log(a);
+        //
+        // // let a = 10;
+        // function fn(){
+        //     let a = 20;
+        //     console.log(a);
+        // }
+        // fn();
+        // console.log(a);
+        //
+        // // let a = 10;
+        // function fn(){
+        //     a = 20;
+        //     var a = 30;
+        //     console.log(a);
+        // }
+        // fn();
+        // console.log(a);
+        //
+        // // let a = 10;
+        // function fn(){
+        //     a = 20;
+        //     let a = 30;
+        //     console.log(a);
+        // }
+        // fn();
+        // console.log(a);
+        //
+        // // let a = 10;
+        // function fn(a){
+        //     a = 20;
+        //     console.log(a);
+        // }
+        // fn();
+        // console.log(a);
+        //
+        // let a = 10;
+        // function fn(a){
+        //     console.log(a);
+        //     a = 20;
+        //     console.log(a);
+        // }
+        // fn(a);
+        // console.log(a);
+
+        // typeof window
+    </script>
 </head>
 <body>
-$END$
+
 </body>
 </html>

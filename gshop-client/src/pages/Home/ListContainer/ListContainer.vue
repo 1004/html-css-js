@@ -3,10 +3,16 @@
         <div class="sortList clearfix">
             <div class="center">
                 <!--banner轮播-->
-                <div class="swiper-container" id="mySwiper">
+                <div class="swiper-container" id="mySwiper" ref="listswiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./images/banner1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/banner2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/banner3.jpg" />
                         </div>
                     </div>
                     <!-- 如果需要分页器 -->
@@ -101,16 +107,42 @@
 </template>
 
 <script>
+    import Swiper from 'swiper'
+
     export default {
         name: 'ListContainer',
         data() {
             return {}
         },
         components: {},
-        methods: {},
+        methods: {
+            initSwiper(){
+                var mySwiper = new Swiper(this.$refs.listswiper, {
+                    loop: true, // 循环模式选项
+                    // autoplay:true,//等同于以下设置
+                    autoplay: {
+                      delay: 3000,
+                      stopOnLastSlide: false,
+                      disableOnInteraction: true,
+                      },
+                    // 如果需要前进后退按钮
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+            }
+
+        },
         props: {},
         computed: {},
         watch: {},
+        mounted(){
+            this.initSwiper();
+        }
+
+
     }
 </script>
 

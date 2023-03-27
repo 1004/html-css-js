@@ -9,7 +9,6 @@
 <script>
     import Header from '@/components/Header'
     import Footer from '@/components/Footer'
-    import {queryCategory} from '@/api'
 
     export default {
         name: 'App',
@@ -19,11 +18,7 @@
         },
         //挂载后
         mounted() {
-            queryCategory().then(result => {
-                console.log(result)
-            }).catch(error => {
-                console.log(result)
-            })
+            this.$store.dispatch('getCategoryList')
         }
     }
 </script>

@@ -7,7 +7,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './routers'
 
-
+//对原有方法的hook,类似代理
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location,onResolve,onReject){
     if (onResolve || onReject) {

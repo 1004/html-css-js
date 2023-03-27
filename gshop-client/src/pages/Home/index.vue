@@ -18,6 +18,8 @@
     import Like from "./Like/Like";
     import Floor from "./Floor/Floor";
     import Brand from "./Brand/Brand";
+
+
     export default {
         name: 'Home',
         props: {},
@@ -28,7 +30,10 @@
         computed: {},
         watch: {},
         methods: {},
-        filters: {}
+        filters: {},
+        mounted() {
+            this
+        }
     }
 </script>
 

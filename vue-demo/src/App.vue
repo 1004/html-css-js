@@ -1,13 +1,14 @@
 <template>
     <div id="app">
-        <!--        <Header :msg="headerData" :callback="callback">-->
-        <!--            <template>-->
-        <!--                <p>来了，客观</p>-->
-        <!--            </template>-->
-        <!--            <template name="line">-->
-        <!--                <a href="#">点击下吧</a>-->
-        <!--            </template>-->
-        <!--        </Header>-->
+        <!--            @符号绑定事件监听【有可能是系统的，有可能是自定义的】 :是绑定静态属性或者方法-->
+        <Header :msg="headerData" :callback="callback" @addTest="addTest">
+            <template>
+                <p>来了，客观</p>
+            </template>
+            <template name="line">
+                <a href="#">点击下吧</a>
+            </template>
+        </Header>
 
         <el-row>
             <el-button round>圆角按钮</el-button>
@@ -18,8 +19,10 @@
             <el-button type="danger" round>危险按钮</el-button>
         </el-row>
 
+        <HintButton title="添加" type="primary" icon="el-icon-edit" >添加</HintButton>
+
         <p>{{$store.state.count}}</p>
-        <!--        <MyButton></MyButton>-->
+                <MyButton></MyButton>
         <div>
             <ul>
                 <li>
@@ -41,6 +44,7 @@
     import MyButton from './components/MyButton'
     import Header from './components/Header'
     import {mapActions, mapState} from 'vuex'
+    import HintButton from "./components/HintButton";
 
     export default {
         name: 'App',
@@ -50,6 +54,7 @@
             }
         },
         components: {
+            HintButton,
             //定义和注册组件，其实是注册的组件的构造函数，在用的位置，用这个构造函数创建组件对象
             MyButton,
             Header
@@ -79,6 +84,10 @@
                 //没有历史记录
                 // this.$route.replace();
             },
+
+            addTest(){
+                console.log("addTest")
+            }
         }
 
     }

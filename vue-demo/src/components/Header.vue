@@ -3,7 +3,11 @@
         <div class="header">
             <p>头部</p>
             <P>{{msg}}</P>
-            <button @click="commit">调用外部</button>
+<!--            <button @click="commit">调用外部</button>-->
+
+<!--            @符号绑定事件监听【有可能是系统的，有可能是自定义的】 :是绑定静态属性或者方法-->
+            <button @click="$emit('addTest')">调用外部</button>
+
             <div>
                 <ul>
                     <li v-for="(item,index) in stus" :key="item.id">
