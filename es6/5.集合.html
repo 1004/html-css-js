@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let s1 = new Set()
+    s1.add('a1').add('a2')
+    s1.forEach((value, key) => {
+        console.log(value)
+    })
+    let v = s1.values()
+    console.log(v.next().value)
+
+    let m1 = new Map()
+    m1.set('a',10)
+    m1.get('a')
+    m1.delete('a')
+
+    const a1 = [12,2]
+    for (const i of a1){
+        console.log(i)
+    }
+</script>
+
+</body>
+</html>

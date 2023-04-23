@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解构赋值</title>
+</head>
+<body>
+
+<script>
+    const [a, b] = [3, 3];
+    console.log(a, b);
+    const [c = 2, d = 2] = [3];
+    console.log(c, d);
+
+    // 结构赋值也可以放到函数形式参数上
+
+    function add([x, y]) {
+        return x + y
+    }
+
+    let a1 = add([3, 4])
+    console.log(a1)
+
+    // 对象的结构赋值
+    const {age: age, username: username} = {
+        age: 19,
+        username: 'xky'
+    }
+
+    console.log(age, username)
+
+
+    // 当前名称和value 一样的时候，可以省略 key
+    let {a2=12} = {
+        a2: 19,
+        u2: 'xky'
+    }
+
+
+    // 这个就是省略的
+    let {a3}={a3:33}
+    console.log(a3)
+
+    // 结构赋值作为参数
+    function testObj({name, age}) {
+        console.log(name,age)
+    }
+
+    testObj({name:'xky',age:39})
+
+    let obj = {
+        t1:'ok',
+        msg:[23,3]
+    }
+
+    let {msg:[,y]} = obj
+
+    console.log(y)
+
+
+</script>
+</body>
+</html>
