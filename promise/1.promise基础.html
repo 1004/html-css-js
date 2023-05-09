@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let p = new Promise((resolve, regict) => {
+        resolve()
+    })
+    p.then(() => {
+        console.log('success')
+        return new Promise((resolve, regict) => {
+            regict('error')
+        })
+    }, () => {
+        console.log('failed')
+    }).catch(err => {
+        console.log(err)
+    }).then(data => {
+        console.log(data)
+    }).finally(() => {
+        console.log('complete')
+    })
+
+    p.then(data => {
+
+    }).catch(err => {
+        console.log(err)
+    })
+
+    // 静态方法直接调用
+    Promise.resolve('成功').then(data => {
+        console.log(data)
+    })
+
+    const delay = ms => {
+        return new Promise((resolve) => {
+            // 通过调用resolve 串起来， 调用后， 会触发下面的 then 的逻辑
+            setTimeout(resolve, ms)
+        })
+    }
+
+    const p1 = delay(1000).then(()=>{
+        console.log('p1 执行')
+    })
+
+    const p2 = delay(2000).then(()=>{
+        console.log('p2 执行')
+    })
+
+    // 都执行成功的时候， 蔡成功
+    // 有一个失败了，则会调用失败
+    Promise.all([p1, p2]).then(() => {
+        console.log('东至县')
+    }, () => {
+
+    })
+
+
+</script>
+</body>
+</html>

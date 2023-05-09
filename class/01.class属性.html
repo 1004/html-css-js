@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Person {
+
+        constructor(name, age) {
+            this._name = name;// 模拟私有
+            this._age = age;
+        }
+
+        static _sex = '男'
+
+        static getSex() {
+            return 'kk'
+        }
+
+        static get sex() {
+            return this._sex;
+        }
+
+
+        get name() {
+            return this._name;
+        }
+
+
+        get age() {
+            return this._age;
+        }
+    }
+
+    class Student extends Person{
+        constructor(name, age) {
+            super(name, age);
+        }
+    }
+
+    let p = new Person('xky', 19)
+    console.log(p.age)
+    console.log(Person.sex)
+
+    let s = new Student('kk',290)
+    console.log(s.age)
+    s.age
+    console.log(s)
+
+
+</script>
+</body>
+</html>
