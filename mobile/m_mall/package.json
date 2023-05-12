@@ -1,0 +1,27 @@
+{
+  "name": "m_mall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "devDependencies": {
+    "art-template-loader": "^1.4.3",
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "swiper": "^9.3.1",
+    "url-loader": "^4.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open chrome"
+  },
+  "author": "",
+  "license": "ISC"
+}
