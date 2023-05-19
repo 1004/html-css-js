@@ -1,1 +1,30 @@
-indexfff
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<div id="index-page" class="index-layout">
+    <header class="header-layout">
+        {{include './components/header/header.art'}}
+    </header>
+    <div id="" class="index-slide">
+        {{include './components/slider/slide.art'}}
+    </div>
+    <div class="index-nav">
+        {{include './components/nav/nav.art'}}
+    </div>
+    <div class="index-product">
+        {{include './components/product/product.art'}}
+    </div>
+    <div class="tabbar-layout">
+        <% include('../../components/tabbar/tabbar.art',{active:'index'})%>
+    </div>
+    <div class="backtop-layout">
+        {{include './components/backtop/backtop.art'}}
+    </div>
+</div>
+</body>
+</html>

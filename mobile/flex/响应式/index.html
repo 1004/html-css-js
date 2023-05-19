@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>响应式</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .content {
+            width: 400px;
+            height: 800px;
+            background-color: pink;
+        }
+
+        @media screen and (min-width: 360px){
+            .content{
+                background-color: #6aaf04;
+            }
+        }
+
+        @media screen and (min-width: 720px){
+            .content{
+                background-color: #2c3e50;
+            }
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="content"></div>
 </body>
 </html>

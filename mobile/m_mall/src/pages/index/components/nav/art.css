@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0 0 0;
+    background-color: #fff;
+}
+
+
+.nav-container .nav-item {
+    width: 25%;
+}
+
+.nav-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-img {
+    width: 49%;
+}
+
+.nav-title{
+    margin-top: 5px;
+    color: #999;
+    font-size: 12px;
+    padding: 0 0 10px 0;
+}

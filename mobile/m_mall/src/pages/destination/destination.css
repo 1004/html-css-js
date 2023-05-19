@@ -1,0 +1,28 @@
+.des-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.des-header-layout {
+    width: 100%;
+    height: 149px;
+    background-color: #3c763d;
+}
+
+
+.des-main-page {
+    width: 100%;
+    flex-grow: 1;
+    background-color: orange;
+}
+
+
+.des-tab-layout {
+    width: 100%;
+    height: 50px;
+}
+
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<div id="des-page" class="des-layout">
+    <div class="des-header-layout">头</div>
+    <div id="des-main-page" class="des-main-layout"></div>
+    <div class="des-tab-layout"></div>
+</div>
+</body>
+</html>

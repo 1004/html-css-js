@@ -1,0 +1,50 @@
+<ul class="nav-container">
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">自由行</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_2.png">
+            <span class="nav-title">优惠机票</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">当地玩乐</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_2.png">
+            <span class="nav-title">签证</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">租车自驾</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">酒店</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">游轮</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:" class="nav-link">
+            <img class="nav-img" src="./images/nav_1.png">
+            <span class="nav-title">全部</span>
+        </a>
+    </li>
+</ul>
