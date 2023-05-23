@@ -1,0 +1,23 @@
+<ul class="desc-menu-container">
+    <li class="desc-menu-item desc-menu-item-active">
+        <a><span>亚洲</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>欧洲</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>非洲</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>北美</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>大洋洲</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>南美洲</span></a>
+    </li>
+    <li class="desc-menu-item">
+        <a><span>南极洲</span></a>
+    </li>
+</ul>

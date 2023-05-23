@@ -1,0 +1,8 @@
+<div class="des-cp-content">
+    <div class="left_tab">
+        {{include '../menu/menu.art'}}
+    </div>
+    <div class="right_main">
+        {{include '../main/main.art'}}
+    </div>
+</div>

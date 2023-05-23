@@ -1,0 +1,29 @@
+.p-header-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("./images/bg.png") no-repeat;
+    background-size: contain;
+    background-color: #fff;
+}
+
+
+.p-header-icon {
+    margin-top: 40px;
+    width: 205px;
+}
+
+.p-header-name {
+    color: #203152;
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.p-header-phone{
+    color: #7c8698;
+    margin-top: 5px;
+    font-size: 14px;
+}
+

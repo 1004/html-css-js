@@ -6,15 +6,15 @@
     <title>Title</title>
 </head>
 <body>
-<div id="des-page" class="des-layout">
-    <div class="des-header-layout">
+<div id="persion-page" class="persion-layout">
+    <div class="persion-header-layout">
         {{include './components/header/header.art'}}
     </div>
-    <div id="des-main-page" class="des-main-layout">
+    <div class="persion-content-layout">
         {{include './components/content/content.art'}}
     </div>
-    <div class="des-tab-layout">
-        <% include('../../components/tabbar/tabbar.art',{active:'dest'})%>
+    <div class="persion-tabbar-layout">
+        <% include('../../components/tabbar/tabbar.art',{active:'persion'})%>
     </div>
 </div>
 </body>

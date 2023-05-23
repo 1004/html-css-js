@@ -9,20 +9,21 @@
 .des-header-layout {
     width: 100%;
     height: 149px;
-    background-color: #3c763d;
 }
 
 
-.des-main-page {
+.des-main-layout {
     width: 100%;
     flex-grow: 1;
-    background-color: orange;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
 .des-tab-layout {
     width: 100%;
     height: 50px;
+    background-color: #f97e27;
 }
 
 

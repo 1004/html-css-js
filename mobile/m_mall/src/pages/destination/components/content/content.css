@@ -1,0 +1,17 @@
+.des-cp-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left_tab {
+    width: 76px;
+    height: 100%;
+}
+
+.right_main{
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+}

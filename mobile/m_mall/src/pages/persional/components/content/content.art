@@ -1,0 +1,32 @@
+<ul class="p-content-layout">
+    <li class="p-content-item">
+        <a href="" class="p-content-item-link">
+            <span class="p-content-name">我的行程计划</span>
+            <i class="iconfont icon-right p-arrow"></i>
+        </a>
+    </li>
+    <li class="p-content-item">
+        <a href="" class="p-content-item-link">
+            <span class="p-content-name">我的收藏</span>
+            <i class="iconfont icon-right p-arrow"></i>
+        </a>
+    </li>
+    <li class="p-content-item">
+        <a href="" class="p-content-item-link">
+            <span class="p-content-name">售后客服</span>
+            <i class="iconfont icon-right p-arrow"></i>
+        </a>
+    </li>
+    <li class="p-content-item">
+        <a href="" class="p-content-item-link">
+            <span class="p-content-name">我的优惠券</span>
+            <i class="iconfont icon-right p-arrow"></i>
+        </a>
+    </li>
+    <li class="p-content-item">
+        <a href="" class="p-content-item-link">
+            <span class="p-content-name">常用旅客管理</span>
+            <i class="iconfont icon-right p-arrow"></i>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,6 @@
+<div class="des-cp-header">
+    <div class="des-cp-header-search">
+        {{include '../../../../components/serachbox/searchbox.art'}}
+    </div>
+    <span class="des-cp-header-tips">目的地</span>
+</div>

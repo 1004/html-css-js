@@ -8,6 +8,7 @@ module.exports = {
     entry:{
         index:'./src/pages/index', //首页
         destination:'./src/pages/destination', // 目标页
+        persion:'./src/pages/persional', // 目标页
     },
     // Webpack 输出路径
     output:{
@@ -53,7 +54,8 @@ module.exports = {
                     // 其他的图片转移到
                     name: 'images/[name].[ext]',
                     esModule: false
-                }
+                },
+                type: "javascript/auto",
             },
             // 字体文件
             {
@@ -77,6 +79,11 @@ module.exports = {
             filename: 'destination.html', //最终结果
             template: './src/pages/destination/destination.art',
             chunks: ['destination'] // 多模块, 只引入自己的js
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'persion.html', //最终结果
+            template: './src/pages/persional/persion.art',
+            chunks: ['persion'] // 多模块, 只引入自己的js
         })
     ]
 }
