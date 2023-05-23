@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolve = dir => path.resolve(__dirname, dir);
 module.exports = {
     mode:'development',
+    // mode:'production',
     // Webpack 入口文件 省略后面的/index.js
     entry:{
         index:'./src/pages/index', //首页
